@@ -1,10 +1,7 @@
 services:
   app:
+    image: dbsedov/docker-project-74
     build:
       context: .
-      dockerfile: Dockerfile
-    volumes:
-      - ./app:/app
-    command: ["make", "test"]
-    user:
-      1000:1000
+      dockerfile: Dockerfile.production
+    command: "make test"
