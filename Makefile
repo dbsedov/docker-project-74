@@ -2,4 +2,4 @@ ci:
 	docker compose -f docker-compose.yml up --build --abort-on-container-exit --exit-code-from app
 
 start-docker-dev:
-	docker compose --build -f docker-compose.override.yml up
+	docker compose up --build

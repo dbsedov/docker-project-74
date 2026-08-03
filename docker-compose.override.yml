@@ -6,6 +6,14 @@ services:
     command: ["make", "dev"]
     volumes:
       - ./app:/app
-    user: 1000:1000
+    user: "1000:1000"
+
+  caddy:
+    image: caddy:latest
     ports:
-      - "8080:8080"
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./services/caddy:/etc/caddy
+    depends_on:
+      - app
