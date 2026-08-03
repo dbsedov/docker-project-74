@@ -1,5 +1,5 @@
 ci:
-	test -f app/.env || cp app/.env.example app/.env
+	test -f .env || cp .env.example .env
 	docker compose -f docker-compose.yml up --build --abort-on-container-exit --exit-code-from app
 
 start-docker-dev:
