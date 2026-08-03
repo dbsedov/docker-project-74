@@ -1,5 +1,5 @@
-start-docker-test:
-	docker compose -f docker-compose.yml up --abort-on-container-exit 
+ci:
+	docker compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
 
 start-docker-dev:
-	docker compose -f docker-compose.override.yml up 
+	docker compose -f docker-compose.override.yml up
