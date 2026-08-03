@@ -1,8 +1,5 @@
-setup:
-	test -f .env || cp .env.example .env
-
-start: setup
+start:
 	docker compose up --build
 
-ci: setup
+ci:
 	docker compose -f docker-compose.yml up --build --abort-on-container-exit --exit-code-from app
