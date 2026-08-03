@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: ["make", "dev"]
+    command: make dev
     volumes:
       - ./app:/app
     user: "1000:1000"
