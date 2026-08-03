@@ -6,7 +6,6 @@ services:
     command: make dev
     volumes:
       - ./app:/app
-    user: "1000:1000"
 
   caddy:
     image: caddy:latest

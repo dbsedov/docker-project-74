@@ -1,2 +1,10 @@
+.git
+.github
+.env
+*.sqlite
 app/node_modules/
 app/dist/
+app/.env
+app/*.sqlite
+README.md
+**/.DS_Store
